@@ -9,3 +9,6 @@ git config --global user.name "MiguelHG2351"
 git status
 git remoce
 git remove
+git add .
+git commit -m "xd"
+git commit -m "initial commit"
