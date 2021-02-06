@@ -1,14 +1,42 @@
 {
     "ace": {
+        "@behavioursEnabled": true,
+        "@fontSize": 12,
         "@keyboardmode": "default",
         "@showFoldWidgets": false,
+        "@showGutter": true,
+        "@showInvisibles": false,
+        "@showLineNumbers": true,
         "@showPrintMargin": false,
+        "@theme": "ace/theme/cloud9_night",
+        "custom-types": {
+            "json()": {
+                "settings": "javascript"
+            }
+        },
         "statusbar": {
-            "@show": true
+            "@show": "true"
         }
     },
+    "breakpoints": {
+        "@active": true
+    },
     "collab": {
+        "@show-author-info": true,
         "@timeslider-visible": false
+    },
+    "cs50": {
+        "presentation": {
+            "@editorFontSize": 24,
+            "@presenting": false,
+            "@terminalFontSize": 24
+        }
+    },
+    "debug": {
+        "@pause": 0
+    },
+    "general": {
+        "@skin": "flat-dark"
     },
     "language": {
         "@continuousCompletion": false,
@@ -17,6 +45,7 @@
     "openfiles": {
         "@show": false
     },
+    "output": {},
     "projecttree": {
         "@showhidden": false
     },
@@ -35,6 +64,7 @@
         }
     },
     "terminal": {
+        "@fontsize": 12,
         "@scrollback": 2000
     }
 }

@@ -9,11 +9,12 @@ int main(void) {
     return 0;
 }
 
+/* Código spagueti :,v */
 const char* validar_un_triangulo(int angulo1, int angulo2, int angulo3) {
-    if(angulo1 > 0 && angulo2 > 0 &&  angulo3 > 0) {
+    if(angulo1 > 0 && angulo2 > 0 &&  angulo3 > 0) { /* Valida todos los lados */
         if(angulo1+angulo2 > angulo3) {
             if(angulo1 + angulo3 > angulo2) {
-                if(angulo2 + angulo3 > angulo1) {
+                if(angulo2 + angulo3 > angulo1) { /* Valida la suma de dos angulos son mayores al tercero */
                     return "Si es un triangulo";
                 } else {
                     return "Un lado no es igual";
