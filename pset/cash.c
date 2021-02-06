@@ -5,7 +5,7 @@ int centavos(float cash);
 
 int main(void) {
     int coins[4] = {25, 10, 5, 1};
-    float cash = get_float("Ingrese el dinero en dolares, no en centavos");
+    float cash = get_float("\nIngrese el dinero en dolares, no en centavos\n");
     int cashCentavos = centavos(cash);
     int returnCoins[4] = {0, 0, 0, 0};
 
@@ -31,7 +31,9 @@ int main(void) {
         }
     }
 
-    printf("Se devuelven: %d de %d¢ %d de %d¢ %d de %d¢ %d de %d¢", returnCoins[0], coins[0], returnCoins[1], coins[1], returnCoins[2], coins[2], returnCoins[3], coins[3]);
+    printf("Se devuelven: %d de %d¢ %d de %d¢ %d de %d¢ %d de %d¢",
+                          returnCoins[0], coins[0], returnCoins[1], coins[1],
+                          returnCoins[2], coins[2], returnCoins[3], coins[3]);
 
     return 0;
 }
