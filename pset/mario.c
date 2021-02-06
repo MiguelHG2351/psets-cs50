@@ -5,9 +5,10 @@ int main(void) {
     int height = 0;
     height = get_int("\nIngrese la altura de la piramide\n");
 
+    for(int i = 0; i <= height - 1; i++) {
 
-    for(int i = 0; i<=height - 1; i++) {
         for(int j = 0; j <= height; j++) {
+
             if(j > height - i-2) {
                 printf("#");
             } else {

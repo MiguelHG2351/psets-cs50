@@ -3,7 +3,9 @@
 
 int main(void) {
 
-    int code = get_int("Ingrese el codigo de su tarjeta de credito");
+    string code = get_string("Ingrese el codigo de su tarjeta de credito");
+    /* 378282246310005 */
+    printf("%c", code[1]);
 
 
     return 0;
