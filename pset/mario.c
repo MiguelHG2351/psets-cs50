@@ -8,10 +8,10 @@ int main(void) {
 
     for(int i = 0; i<=height - 1; i++) {
         for(int j = 0; j <= height; j++) {
-            if(j > height - i) {
+            if(j > height - i-2) {
                 printf("#");
             } else {
-                printf("-");
+                printf(" ");
             }
             if(j == height) {
                 printf("\n");
