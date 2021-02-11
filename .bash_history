@@ -484,3 +484,8 @@ git logs
 git log
 git add .
 git status
+git add .
+git commit -m "first commit, before github"
+git remote add origin https://github.com/MiguelHG2351/psets-cs50.git
+git branch -M main
+git push -u origin main
