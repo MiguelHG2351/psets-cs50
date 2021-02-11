@@ -412,3 +412,75 @@ make credit
 ./credit
 make credit
 ./credit
+git commit -am "ya itera sobre los elementos :,v"
+make credit
+./credit
+#include<stdio.h>
+int main(void) {
+}
+make credit 
+./credit 
+make credit 
+./credit 
+make credit 
+./credit 
+make credit 
+./credit 
+make credit 
+./credit 
+make credit 
+./credit 
+make credit 
+./credit 
+make credit 
+./credit 
+make test 
+./credit 
+make test
+./test
+make mario 
+./mario
+make test
+./test
+make test
+./test
+make test
+./test
+make test
+./test
+make test
+./test
+make test
+./test
+make test
+./test
+git add .
+git commit -m "se va a agregar la opción de introducir el código de la tarjeta"
+clear
+make test
+./test
+make test
+check50 cs50/problems/2018/x/hello
+submit cs50
+pip3 install submit50
+submit50
+check50 cs50/problems/2018/x/hello
+check50 cs50/problems/2018/x/mario
+check50 cs50/problems/2018/x/mario/less
+make mario
+./mario
+submit50 cs50/problems/2018/x/hello
+submit50 cs50/problems/2018/x/mario/less
+submit50 cs50/problems/2018/x/cash
+cd psq
+cd pset/
+check50 cs50/problems/2018/x/cash
+submit50 cs50/problems/2018/x/cash
+./cash
+make cash
+./cash
+git status
+git logs
+git log
+git add .
+git status

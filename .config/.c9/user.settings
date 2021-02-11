@@ -47,7 +47,7 @@
     },
     "output": {},
     "projecttree": {
-        "@showhidden": false
+        "@showhidden": true
     },
     "tabs": {
         "@asterisk": false,

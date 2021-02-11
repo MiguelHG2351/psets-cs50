@@ -1,0 +1,4 @@
+cd
+mkdir
+mv -> mover, realiza un cambio de nombre si se mueve al mismo directorio
+cp -> copiar

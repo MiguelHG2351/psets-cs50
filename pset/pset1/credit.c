@@ -1,5 +1,7 @@
 #include<stdio.h>
 
+// prototype
+void enteroACadena(unsigned long long numero, char *bufer);
 
 int main(void) {
     /* Primer paso, generar un arreglo de los números de la tarjeta */
@@ -31,4 +33,10 @@ int main(void) {
     }
 
     return 0;
+}
+
+
+void enteroACadena(unsigned long long numero, char *bufer){
+    // llu es para un long long unsigned.
+    sprintf(bufer, "%llu", numero);
 }
