@@ -4,5 +4,9 @@ node_modules
 .local
 .ssh
 .npm/*
+.npm
 .bash_history/*
 .config/*
+*.out
+*.exe
+.c9
