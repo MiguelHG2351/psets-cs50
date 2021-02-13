@@ -1,6 +1,3 @@
-git status
-cls
-git init
 git add .
 git commit -m "first commit"
 git config -l
@@ -489,3 +486,17 @@ git commit -m "first commit, before github"
 git remote add origin https://github.com/MiguelHG2351/psets-cs50.git
 git branch -M main
 git push -u origin main
+git add .
+git commit -m "README :D"
+git push
+git push origin main
+cd psets
+cd pset
+.cd cash
+cd cash
+./cash
+cd pset1
+./cash
+style50 cash.c
+git status
+clear

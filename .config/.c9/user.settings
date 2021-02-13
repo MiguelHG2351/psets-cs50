@@ -43,7 +43,7 @@
         "@enterCompletion": false
     },
     "openfiles": {
-        "@show": false
+        "@show": true
     },
     "output": {},
     "projecttree": {
