@@ -1,13 +1,14 @@
-#include<stdio.h>
-#include<string.h>
-#include<ctype.h>
-#include<cs50.h>
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+#include <cs50.h>
 
 int asciiToStandar(int number);
 
 // Obtienen los parámetros
-int main(int argc, string argv[]) {
-    if(argc != 2)
+int main(int argc, string argv[])
+{
+    if (argc != 2)
     {
         printf("Error");
         return 1;
@@ -19,9 +20,10 @@ int main(int argc, string argv[]) {
 
     int lengthk = strlen(secret);
 
-    for (int n = 0; n < lengthk ; n++)
+    for (int n = 0; n < lengthk; n++)
     {
-        if (!isalpha(secret[n])) {
+        if (!isalpha(secret[n]))
+        {
             printf("Error");
             return 1;
         }
@@ -39,15 +41,16 @@ int main(int argc, string argv[]) {
             int lengthSecret = strlen(secret);
             // Longitud del carácter del secret a cifrar
             int ascciiCodeSecret = asciiToStandar(secret[j]);
-        // Longitud del carácter de la frase
-        int asciiCodeFrase = asciiToStandar(frase[i]);
+            // Longitud del carácter de la frase
+            int asciiCodeFrase = asciiToStandar(frase[i]);
             // El algoritmo de cifrado
             int crypt = (asciiCodeFrase + ascciiCodeSecret) % 26;
 
-            if(isLower)
+            if (isLower)
             {
                 frase[i] = crypt + 97;
-            } else
+            }
+            else
             {
                 frase[i] = crypt + 65;
             }
@@ -56,7 +59,6 @@ int main(int argc, string argv[]) {
             if (j == lengthSecret)
             {
                 j = 0;
-
             }
         }
     }
@@ -68,13 +70,13 @@ int main(int argc, string argv[]) {
 
 int asciiToStandar(int number)
 {
-    if(number >= 65 && number <= 90)
+    if (number >= 65 && number <= 90)
     {
         number -= 65;
         return number;
     }
 
-    if(number >= 97 && number <= 122)
+    if (number >= 97 && number <= 122)
     {
         number -= 97;
         return number;
@@ -84,5 +86,5 @@ int asciiToStandar(int number)
         return number;
     }
 
-     return number;
+    return number;
 }

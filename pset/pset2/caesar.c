@@ -20,9 +20,12 @@ int main(int argc, string argv[])
     int length = strlen(frase);
     int stringToASCII;
 
-    if(argc > 1) {
+    if (argc > 1)
+    {
         crypto = atoi(argv[1]);
-    } else {
+    }
+    else
+    {
         return 0;
     }
 
@@ -42,7 +45,8 @@ int main(int argc, string argv[])
                 {
                     // usa una variable temporal
                     int temp = ((stringToASCII + crypto) - 122) + 96;
-                    while (temp > 122) {
+                    while (temp > 122)
+                    {
                         temp -= 122;
                         temp += 96;
                     }
@@ -55,10 +59,12 @@ int main(int argc, string argv[])
             }
             else if (stringToASCII >= 65)
             {
-                if(stringToASCII + crypto > 90) {
+                if (stringToASCII + crypto > 90)
+                {
                     // usa una variable temporal
                     int temp = ((stringToASCII + crypto) - 90) + 65;
-                    while (temp > 90) {
+                    while (temp > 90)
+                    {
                         temp -= 90;
                         temp += 65;
                     }
