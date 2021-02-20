@@ -1,5 +1,11 @@
 {
     "cs50": {
+        "debug": {
+            "@name": null,
+            "@pid": null,
+            "@proxy": null,
+            "@runner": null
+        },
         "simple": {
             "settings": {
                 "@revision": 6
