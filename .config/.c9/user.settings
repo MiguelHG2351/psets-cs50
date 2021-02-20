@@ -1,7 +1,7 @@
 {
     "ace": {
         "@behavioursEnabled": true,
-        "@fontSize": 12,
+        "@fontSize": 15,
         "@keyboardmode": "default",
         "@showFoldWidgets": false,
         "@showGutter": true,
@@ -47,7 +47,7 @@
     },
     "output": {},
     "projecttree": {
-        "@showhidden": true
+        "@showhidden": false
     },
     "tabs": {
         "@asterisk": false,
@@ -65,6 +65,9 @@
     },
     "terminal": {
         "@fontsize": 12,
-        "@scrollback": 2000
+        "@scrollback": 2000,
+        "noclosequestion": {
+            "json()": "true"
+        }
     }
 }

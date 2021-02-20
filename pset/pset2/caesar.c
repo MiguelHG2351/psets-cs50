@@ -42,6 +42,10 @@ int main(int argc, string argv[])
                 {
                     // usa una variable temporal
                     int temp = ((stringToASCII + crypto) - 122) + 96;
+                    while (temp > 122) {
+                        temp -= 122;
+                        temp += 96;
+                    }
                     frase[i] = temp;
                 }
                 else
@@ -51,10 +55,13 @@ int main(int argc, string argv[])
             }
             else if (stringToASCII >= 65)
             {
-                if (stringToASCII + crypto > 90)
-                {
+                if(stringToASCII + crypto > 90) {
                     // usa una variable temporal
                     int temp = ((stringToASCII + crypto) - 90) + 65;
+                    while (temp > 90) {
+                        temp -= 90;
+                        temp += 65;
+                    }
                     frase[i] = temp;
                 }
                 else

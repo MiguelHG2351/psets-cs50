@@ -1,11 +1,13 @@
 #include<stdio.h>
+#include<ctype.h>
 #include<cs50.h>
 
 int main(void) {
-    string xd = "a";
-    int xd2 = xd[0];
-    printf("xd %d", xd2);
-    printf("xd %c", 97);
+    string xd = "aBC{{";
 
+    if (isalpha(xd))
+    {
+        printf("XD");
+    }
     return 0;
 }
