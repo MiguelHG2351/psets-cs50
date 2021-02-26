@@ -1,10 +1,10 @@
 {
     "cs50": {
         "debug": {
-            "@name": null,
-            "@pid": null,
-            "@proxy": null,
-            "@runner": null
+            "@name": {},
+            "@pid": {},
+            "@proxy": {},
+            "@runner": {}
         },
         "simple": {
             "settings": {

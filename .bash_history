@@ -328,3 +328,23 @@ debug50 vigenere 2
 ./vigenere 2
 check50 cs50/problems/2017/x/vigenere
 submit50 cs50/problems/2017/x/vigenere
+git add .
+git commit -m "last commit"
+git push
+git push origin CS50IDE
+git pull
+git branch --set-upstream-to=origin/CS50IDE
+git pull
+cd pset
+cd pset3
+wget http://cdn.cs50.net/2017/fall/psets/3/music.zip
+unzip music.zip
+cd pset
+cd pset3
+cd s
+cd music
+cd songs/
+vim jeopardy.txt 
+clear
+cd ..
+make notes

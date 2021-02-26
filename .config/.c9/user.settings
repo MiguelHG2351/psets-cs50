@@ -1,7 +1,7 @@
 {
     "ace": {
         "@behavioursEnabled": true,
-        "@fontSize": 15,
+        "@fontSize": 16,
         "@keyboardmode": "default",
         "@showFoldWidgets": false,
         "@showGutter": true,
