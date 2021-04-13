@@ -1,0 +1,14 @@
+https://stackoverflow.com/questions/3724242/what-is-the-difference-between-int-and-uint-long-and-ulong
+https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-dtyp/f8573df3-a44a-4a50-b070-ac4c3aa78e3c
+https://stackoverflow.com/questions/3724242/what-is-the-difference-between-int-and-uint-long-and-ulong
+https://stackoverflow.com/questions/58889553/c-c-dword-to-byte-and-byte-to-dword-conversion-in-three-dimensional-array
+https://docs.microsoft.com/en-us/previous-versions//dd183376(v=vs.85)?redirectedfrom=MSDN
+https://gist.github.com/guohai/5848088
+https://i.blogs.es/2288ab/3264/1366_2000.png 32 o 64 bits
+https://www.lifewire.com/32-bit-64-bit-2624554
+
+// extra
+https://www.xataka.com/basics/que-significa-que-mi-cpu-sea-de-32-o-64-bits-y-cual-es-la-diferencia
+
+// Respuesta a los magic numbers
+https://gist.github.com/leommoore/f9e57ba2aa4bf197ebc5

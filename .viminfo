@@ -26,22 +26,114 @@
 |3,0,32,0,1,0,1613855044,"€ýa"
 
 # File marks:
-'0  2  0  ~/pset/pset3/music/songs/jeopardy.txt
-|4,48,2,0,1613855054,"~/pset/pset3/music/songs/jeopardy.txt"
-'1  2  0  ~/pset/pset3/music/songs/jeopardy.txt
-|4,49,2,0,1613855050,"~/pset/pset3/music/songs/jeopardy.txt"
+'0  1  0  /home/cs50/2019/spring/pset4/speller.c
+|4,48,1,0,1617591979,"/home/cs50/2019/spring/pset4/speller.c"
+'1  88  4  ~/pset/pset5/speller/speller.c
+|4,49,88,4,1616870673,"~/pset/pset5/speller/speller.c"
+'2  1  0  ~/pset/pset5/speller/dictionar
+|4,50,1,0,1616870649,"~/pset/pset5/speller/dictionar"
+'3  2  0  ~/pset/pset3/music/songs/jeopardy.txt
+|4,51,2,0,1613855054,"~/pset/pset3/music/songs/jeopardy.txt"
+'4  2  0  ~/pset/pset3/music/songs/jeopardy.txt
+|4,52,2,0,1613855050,"~/pset/pset3/music/songs/jeopardy.txt"
 
 # Jumplist (newest first):
+-'  1  0  /home/cs50/2019/spring/pset4/speller.c
+|4,39,1,0,1617591979,"/home/cs50/2019/spring/pset4/speller.c"
+-'  88  4  ~/pset/pset5/speller/speller.c
+|4,39,88,4,1616870673,"~/pset/pset5/speller/speller.c"
+-'  88  4  ~/pset/pset5/speller/speller.c
+|4,39,88,4,1616870673,"~/pset/pset5/speller/speller.c"
+-'  1  0  ~/pset/pset5/speller/speller.c
+|4,39,1,0,1616870664,"~/pset/pset5/speller/speller.c"
+-'  1  0  ~/pset/pset5/speller/speller.c
+|4,39,1,0,1616870664,"~/pset/pset5/speller/speller.c"
+-'  1  0  ~/pset/pset5/speller/dictionar
+|4,39,1,0,1616870649,"~/pset/pset5/speller/dictionar"
+-'  1  0  ~/pset/pset5/speller/dictionar
+|4,39,1,0,1616870649,"~/pset/pset5/speller/dictionar"
+-'  1  0  ~/pset/pset5/speller/dictionar
+|4,39,1,0,1616870649,"~/pset/pset5/speller/dictionar"
+-'  1  0  ~/pset/pset5/speller/dictionar
+|4,39,1,0,1616870649,"~/pset/pset5/speller/dictionar"
 -'  2  0  ~/pset/pset3/music/songs/jeopardy.txt
 |4,39,2,0,1613855054,"~/pset/pset3/music/songs/jeopardy.txt"
+-'  2  0  ~/pset/pset3/music/songs/jeopardy.txt
+|4,39,2,0,1613855054,"~/pset/pset3/music/songs/jeopardy.txt"
+-'  2  0  ~/pset/pset3/music/songs/jeopardy.txt
+|4,39,2,0,1613855054,"~/pset/pset3/music/songs/jeopardy.txt"
+-'  2  0  ~/pset/pset3/music/songs/jeopardy.txt
+|4,39,2,0,1613855054,"~/pset/pset3/music/songs/jeopardy.txt"
+-'  2  0  ~/pset/pset3/music/songs/jeopardy.txt
+|4,39,2,0,1613855054,"~/pset/pset3/music/songs/jeopardy.txt"
+-'  2  0  ~/pset/pset3/music/songs/jeopardy.txt
+|4,39,2,0,1613855054,"~/pset/pset3/music/songs/jeopardy.txt"
+-'  2  0  ~/pset/pset3/music/songs/jeopardy.txt
+|4,39,2,0,1613855054,"~/pset/pset3/music/songs/jeopardy.txt"
+-'  2  0  ~/pset/pset3/music/songs/jeopardy.txt
+|4,39,2,0,1613855054,"~/pset/pset3/music/songs/jeopardy.txt"
+-'  2  0  ~/pset/pset3/music/songs/jeopardy.txt
+|4,39,2,0,1613855050,"~/pset/pset3/music/songs/jeopardy.txt"
+-'  2  0  ~/pset/pset3/music/songs/jeopardy.txt
+|4,39,2,0,1613855050,"~/pset/pset3/music/songs/jeopardy.txt"
+-'  2  0  ~/pset/pset3/music/songs/jeopardy.txt
+|4,39,2,0,1613855050,"~/pset/pset3/music/songs/jeopardy.txt"
+-'  2  0  ~/pset/pset3/music/songs/jeopardy.txt
+|4,39,2,0,1613855050,"~/pset/pset3/music/songs/jeopardy.txt"
+-'  2  0  ~/pset/pset3/music/songs/jeopardy.txt
+|4,39,2,0,1613855050,"~/pset/pset3/music/songs/jeopardy.txt"
+-'  2  0  ~/pset/pset3/music/songs/jeopardy.txt
+|4,39,2,0,1613855050,"~/pset/pset3/music/songs/jeopardy.txt"
+-'  2  0  ~/pset/pset3/music/songs/jeopardy.txt
+|4,39,2,0,1613855050,"~/pset/pset3/music/songs/jeopardy.txt"
 -'  2  0  ~/pset/pset3/music/songs/jeopardy.txt
 |4,39,2,0,1613855050,"~/pset/pset3/music/songs/jeopardy.txt"
 -'  1  0  ~/pset/pset3/music/songs/jeopardy.txt
 |4,39,1,0,1613854065,"~/pset/pset3/music/songs/jeopardy.txt"
 -'  1  0  ~/pset/pset3/music/songs/jeopardy.txt
 |4,39,1,0,1613854065,"~/pset/pset3/music/songs/jeopardy.txt"
+-'  1  0  ~/pset/pset3/music/songs/jeopardy.txt
+|4,39,1,0,1613854065,"~/pset/pset3/music/songs/jeopardy.txt"
+-'  1  0  ~/pset/pset3/music/songs/jeopardy.txt
+|4,39,1,0,1613854065,"~/pset/pset3/music/songs/jeopardy.txt"
+-'  1  0  ~/pset/pset3/music/songs/jeopardy.txt
+|4,39,1,0,1613854065,"~/pset/pset3/music/songs/jeopardy.txt"
+-'  1  0  ~/pset/pset3/music/songs/jeopardy.txt
+|4,39,1,0,1613854065,"~/pset/pset3/music/songs/jeopardy.txt"
+-'  1  0  ~/pset/pset3/music/songs/jeopardy.txt
+|4,39,1,0,1613854065,"~/pset/pset3/music/songs/jeopardy.txt"
+-'  1  0  ~/pset/pset3/music/songs/jeopardy.txt
+|4,39,1,0,1613854065,"~/pset/pset3/music/songs/jeopardy.txt"
+-'  1  0  ~/pset/pset3/music/songs/jeopardy.txt
+|4,39,1,0,1613854065,"~/pset/pset3/music/songs/jeopardy.txt"
+-'  1  0  ~/pset/pset3/music/songs/jeopardy.txt
+|4,39,1,0,1613854065,"~/pset/pset3/music/songs/jeopardy.txt"
+-'  1  0  ~/pset/pset3/music/songs/jeopardy.txt
+|4,39,1,0,1613854065,"~/pset/pset3/music/songs/jeopardy.txt"
+-'  1  0  ~/pset/pset3/music/songs/jeopardy.txt
+|4,39,1,0,1613854065,"~/pset/pset3/music/songs/jeopardy.txt"
+-'  1  0  ~/pset/pset3/music/songs/jeopardy.txt
+|4,39,1,0,1613854065,"~/pset/pset3/music/songs/jeopardy.txt"
+-'  1  0  ~/pset/pset3/music/songs/jeopardy.txt
+|4,39,1,0,1613854065,"~/pset/pset3/music/songs/jeopardy.txt"
+-'  1  0  ~/pset/pset3/music/songs/jeopardy.txt
+|4,39,1,0,1613854065,"~/pset/pset3/music/songs/jeopardy.txt"
+-'  1  0  ~/pset/pset3/music/songs/jeopardy.txt
+|4,39,1,0,1613854065,"~/pset/pset3/music/songs/jeopardy.txt"
 
 # History of marks within files (newest to oldest):
+
+> /home/cs50/2019/spring/pset4/speller.c
+	*	1617591979	0
+	"	1	0
+
+> ~/pset/pset5/speller/speller.c
+	*	1616870673	0
+	"	88	4
+
+> ~/pset/pset5/speller/dictionar
+	*	1616870648	0
+	"	1	0
 
 > ~/pset/pset3/music/songs/jeopardy.txt
 	*	1613855054	0

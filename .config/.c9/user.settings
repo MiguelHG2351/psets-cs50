@@ -1,7 +1,7 @@
 {
     "ace": {
         "@behavioursEnabled": true,
-        "@fontSize": 16,
+        "@fontSize": 15,
         "@keyboardmode": "default",
         "@showFoldWidgets": false,
         "@showGutter": true,
@@ -38,6 +38,10 @@
     "general": {
         "@skin": "flat-dark"
     },
+    "imgeditor": {
+        "@smooth": false,
+        "@zoom": 100
+    },
     "language": {
         "@continuousCompletion": false,
         "@enterCompletion": false
@@ -64,7 +68,7 @@
         }
     },
     "terminal": {
-        "@fontsize": 12,
+        "@fontsize": 11,
         "@scrollback": 2000,
         "noclosequestion": {
             "json()": "true"

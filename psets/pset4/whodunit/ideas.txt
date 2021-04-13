@@ -1,0 +1,2 @@
+Las estructuras son las cabeceras
+Se inicia trabajando desde  54 bytes en adelante por que esos primeros 54 son metadatos

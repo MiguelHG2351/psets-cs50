@@ -1,0 +1,9 @@
+tabla
+
+los buckets son los pequeños contenedores de las hash, cada indice indica un bucket
+
+|0| -> |a| |b|
+|1| -> |c| |d| |e|
+|2| -> || ||
+|3| -> || ||
+|4| -> || ||
