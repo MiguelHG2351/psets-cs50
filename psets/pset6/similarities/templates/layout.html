@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="/static/styles.css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap" rel="stylesheet">
+
+        <title>Similarities</title>
+
+    </head>
+    <body>
+
+        <header class="header-site">
+            <nav>
+                <a class="navbar-brand" href="/">Similarities</a>
+            </nav>
+        </header>
+        <section class="container">
+            {% block body %}{% endblock %}
+        </section>
+        <script>
+            if('registerProperty' in CSS) {
+                try {
+                    window.CSS.registerProperty({
+                        name: '--primary-color',
+                        syntax: '<color>',
+                        inherits: true,
+                        initialValue: '#d87211'
+                    })
+
+                    window.CSS.registerProperty({
+                        name: '--secondary-color',
+                        syntax: '<color>',
+                        inherits: true,
+                        initialValue: '#e91e63'
+                    })
+
+                    window.CSS.registerProperty({
+                        name: '--tertiary-color',
+                        syntax: '<color>',
+                        inherits: true,
+                        initialValue: '#9c27b0'
+                    })
+                    console.log('Register property')
+                } catch (error) {
+                    console.log(error)
+                }
+            } else {
+                console.log('register property is not available')
+            }
+        </script>
+    </body>
+</html>

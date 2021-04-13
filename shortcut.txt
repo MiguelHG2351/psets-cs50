@@ -1,0 +1,1 @@
+ctr + k + u -> agrega a mayúsculas el texto al ser seleccionado

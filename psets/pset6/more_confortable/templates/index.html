@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+    <!-- Ya me dio pereza darle estilos, ahí se va con bootstrap -->
+    <form class="container-fluid" method="post" action="/score" enctype="multipart/form-data">
+        <div class="row">
+            <div class="col-6">
+                 <input type="text" name="string1" id="">
+                 <input type="text" name="string2" id="">
+                <button class="btn btn-primary" type="submit">Score</button>
+            </div>
+        </div>
+    </form>
+
+{% endblock %}

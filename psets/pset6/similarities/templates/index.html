@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <form class="form" action="/compare" enctype="multipart/form-data" method="post">
+        <div class="gradient-border"></div>
+        <div class="form-control">
+            <div class="submit-files">
+                <div class="submit-file">
+                    <img src="/static/figma2.png" alt="Imagen de descarga">
+                    <input type="file" name="file1">
+                </div>
+                <div class="submit-file">
+                    <img src="/static/figma2.png" alt="Imagen de descarga">
+                    <input type="file" name="file2">
+                </div>
+            </div>
+            <div class="select-options">
+                <label for="lines">
+                    Compare lines
+                    <input type="radio" name="algorithm" value="lines" id="lines" />
+                </label>
+                <label for="sentences">
+                    Compare sentences
+                    <input type="radio" name="algorithm" value="sentences" id="sentences" />
+                </label>
+                <label for="substrings">
+                    Compare substrings
+                    <input type="radio" name="algorithm" value="substrings" id="substrings" />
+                    <input type="number" name="length" id="substrings">
+                </label>
+            </div>
+            <div class="submit">
+                <button type="submit" class="btn">Compare</button>
+            </div>
+        </div>
+    </form>
+
+{% endblock %}
