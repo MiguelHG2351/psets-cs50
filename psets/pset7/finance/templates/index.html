@@ -9,20 +9,35 @@
         <thead>
             <tr>
                 <th>Symbol</th>
+                <th>Name</th>
                 <th>Shares</th>
                 <th>Prices</th>
-                <th>Transacted</th>
+                <th>TOTAL</th>
             </tr>
         </thead>
         <tbody>
             {% for transaction in transactions %}
                 <tr>
                     <td>{{ transaction.symbol }}</td>
-                    <td>{{ transaction.share }}</td>
-                    <td>{{ usd(transaction.price_per_share)}}</td>
-                    <td>{{ transaction.date }}</td>
+                    <td>{{ transaction.symbol }}</td>
+                    <td>{{ transaction.shares }}</td>
+                    <td>{{ usd(transaction.price) }}</td>
+                    <td>{{ usd(transaction.total) }}</td>
                 </tr>
             {% endfor %}
+            <tr>
+                <td>CASH</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>{{ cash }}</td>
+            </tr>
         </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="4"></td>
+                <td>$10,0000.00</td>
+            </tr>
+        </tfoot>
     </table>
 {% endblock %}

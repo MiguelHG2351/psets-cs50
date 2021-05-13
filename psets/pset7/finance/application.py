@@ -1,14 +1,19 @@
 from cs50 import SQL
-from flask import Flask, flash, redirect, render_template, request, session
+from flask import Flask, flash, redirect, url_for, render_template, request, session
 from flask_session import Session
 from tempfile import mkdtemp
 from werkzeug.exceptions import default_exceptions
 from werkzeug.security import check_password_hash, generate_password_hash
 
-from helpers import apology, login_required, lookup, usd
+from helpers import apology, login_required, lookup
 
 # Configure application
 app = Flask(__name__)
+
+
+def usd(value):
+    """Formats value as USD."""
+    return f"${value:,.2f}"
 
 # Ensure responses aren't cached
 @app.after_request
@@ -35,13 +40,13 @@ db = SQL("sqlite:///finance.db")
 @login_required
 def index():
     """Show portfolio of stocks"""
+    # selecciona los campos symbol, shares de portafolio donde el user_id sea el id que se pasa de session['user_id']
     pf = db.execute("SELECT symbol, shares FROM portfolio WHERE user_id=:id", id=session["user_id"])
     stonks = 0
-
     for p in pf:
         symbol = p["symbol"]
         shares = p["shares"]
-        price = lookup(symbol)
+        price = lookup(symbol)['price']
         total = price * shares
         stonks += total
         db.execute("update portfolio set price = :pr, total = :t where symbol = :sym and user_id = :id", pr=price, t=total, sym=symbol, id=session["user_id"])
@@ -57,33 +62,33 @@ def index():
     transactions = db.execute(
         "SELECT symbol,SUM(share) as shares, price_per_share as price,SUM(TOTAL) as total  FROM transactions WHERE user_id = :id GROUP BY symbol, price_per_share", id=session["user_id"])
 
-    return render_template("index.html", cash=usd(cash), stonks=usd(stonks), transactions=transactions)
+    return render_template("index.html", cash=usd(cash), stonks=usd(stonks), transactions=transactions, usd = usd)
 
 
 @app.route("/buy", methods=["GET", "POST"])
 @login_required
 def buy():
     """Buy shares of stock"""
-        # si el simbolo existe
     if request.method == "POST":
         quote = lookup(request.form.get("symbol"))
+        print(quote)
         if quote == None:
             return apology("Simbolo invalido", 400)
 
-        # si share tiene un entero positivo
+        # si es entero positivo
         try:
             share = int(request.form.get("shares"))
         except:
             return apology("Las acciones deben ser positivas", 400)
 
-        # si las acciones solicitadas son 0
+        # Si no especifico la cantidad de acciones  a comprar
         if share <= 0:
             return apology("Debes solicitar un numero de acciones")
 
-        # consulta la base de datos para el username
+        # consulta la base de datos para el username, 'selecciona el cash de la tabla users donde el id sea: '
         rows = db.execute("SELECT cash FROM users  WHERE id = :user_id", user_id=session["user_id"])
 
-        # dinero que el usuario dispone en la cuenta
+        # dinero que el usuario dispone en la cuenta y el que va a gastar en share
         cash_remaining = rows[0]["cash"]
         price_per_share = quote["price"]
 
@@ -93,14 +98,14 @@ def buy():
         if total_price > cash_remaining:
             return apology("No posee fondos suficientes para completar esta accion")
 
-        # TODO = transaccion
+        # Actualiza estas tablas con estos valores, y donde el id sea: . E inserta en el historial de transacciones estos valores
         db.execute("UPDATE users SET cash = cash- :price WHERE id = :user_id", price=total_price, user_id=session["user_id"])
         db.execute("INSERT INTO  transactions (user_id, symbol, share, price_per_share, TOTAL) VALUES (:user_id, :symbol, :share, :price, :total)",
                     user_id=session["user_id"],
                 symbol=request.form.get("symbol"),
                 share=share,
                 price=price_per_share, total=total_price)
-        flash("Comprado!")
+        flash("Bought!") # Mensaje de todo bien, todo correcto
 
         return redirect(url_for("index"))
     else:
@@ -136,15 +141,15 @@ def login():
             return apology("must provide password", 403)
 
         # Query database for username
-        rows = db.execute("SELECT * FROM users WHERE username = :username",
+        user = db.execute("SELECT * FROM users WHERE username = :username",
                           username=request.form.get("username"))
 
         # Ensure username exists and password is correct
-        if len(rows) != 1 or not check_password_hash(rows[0]["hash"], request.form.get("password")):
+        if len(user) != 1 or not check_password_hash(user[0]["hash"], request.form.get("password")):
             return apology("invalid username and/or password", 403)
 
         # Remember which user has logged in
-        session["user_id"] = rows[0]["id"]
+        session["user_id"] = user[0]["id"]
 
         # Redirect user to home page
         return redirect("/")
@@ -200,7 +205,7 @@ def register():
             return apology("Parece que escribiste mal un caracter o número, F")
         if db.execute("SELECT username FROM users WHERE username = :username", username=request.form["username"]):
             return apology("El nombre de usuario ya existe, intenta con otro")
-        userID = db.execute('INSERT INTO users(username, hash) VALUES (:username, :pwd)', username = request.form['username'], pwd=generate_password_hash(request.form['password']))
+        userID = db.execute('INSERT INTO users(username, hash) VALUES (:username, :pwd)', username = username, pwd=generate_password_hash(password))
         session['user_id'] = userID
 
         return redirect('/')
@@ -216,7 +221,7 @@ def sell():
             if not request.form.get('symbol'):
                 return apology("No es una acción valida", 400)
         quote = lookup(request.form.get("symbol"))
-        if qoute == None:
+        if quote == None:
             return apology('Invalid symbol', 400)
 
         if not request.form.get("shares").isnumeric() or int(request.form.get("shares")) < 1:
@@ -229,15 +234,17 @@ def sell():
         if share <= 0:
             return apology("Debes solicitar un numero de acciones", 400)
 
-        rows = db.execute("SELECT cash FROM users  WHERE id = :user_id", user_id=session["user_id"])
+        users = db.execute("SELECT cash FROM users  WHERE id = :user_id", user_id=session["user_id"])
+        shares = int(db.execute('SELECT share FROM transactions WHERE user_id=:id', id=session['user_id'])[0]['share'])
 
-        cash = rows[0]["cash"]
+        current_cash = users[0]["cash"]
         price_per_share = quote["price"]
-
         total_price = price_per_share * share
-
-        if total_price > cash_remaining:
-            return apology("No posee fondos suficientes para completar esta accion", 400)
+        print(f'shares: ${shares}, share: ${share}')
+        if total_price > current_cash:
+            return apology("No posee fondos suficientes para completar esta accion", 403)
+        if share > shares:
+            return apology("Too many symbols", 400);
 
         db.execute("UPDATE users SET cash = cash + :price_per_share WHERE id = :user_id",
                     price_per_share=total_price, user_id=session["user_id"])
@@ -248,7 +255,7 @@ def sell():
                     share=share*-1,
                     price=price_per_share,
                     TOTAL=price_per_share*share*-1)
-        flash("Vendido! c:")
+        flash("Sold!")
 
         return redirect("/")
 

@@ -108,7 +108,3 @@ def lookup(symbol):
     except:
         return None
 
-
-def usd(value):
-    """Formats value as USD."""
-    return f"${value:,.2f}"
